@@ -1,6 +1,7 @@
 // src/app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import { sanitizeField } from "@src/utils/mailHelpers";
+import { sendFormSubmissionEmail } from "@src/lib/formMailer";
 import type { ApiResponse } from "@src/types/generic";
 
 export async function POST(request: Request) {
@@ -27,11 +28,27 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log(`[Contact Inquiry] From: ${name} (${email}) - ${message.slice(0, 50)}...`);
+    const result = await sendFormSubmissionEmail({
+      formId: "FORM-CONTACT-02",
+      formTitle: "General Contact Inquiry",
+      replyTo: email,
+      fields: {
+        Name: name,
+        Email: email,
+        Phone: phone,
+        Company: company,
+        Message: message,
+      },
+    });
 
     return NextResponse.json<ApiResponse>({
       success: true,
       message: "Thank you for reaching out! A Trekk specialist will respond shortly.",
+      data: {
+        formId: "FORM-CONTACT-02",
+        formTitle: "General Contact Inquiry",
+        submissionId: result.submissionId,
+      },
     });
   } catch (error) {
     console.error("Contact API error:", error);
@@ -41,4 +58,3 @@ export async function POST(request: Request) {
     );
   }
 }
-

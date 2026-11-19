@@ -4,6 +4,7 @@ import {
   sanitizeField,
   buildLaunchConfirmationHtml,
 } from "@src/utils/mailHelpers";
+import { sendFormSubmissionEmail } from "@src/lib/formMailer";
 import type { ApiResponse } from "@src/types/generic";
 
 export async function POST(request: Request) {
@@ -53,12 +54,31 @@ export async function POST(request: Request) {
       organisation,
     });
 
-    console.log(`[Launch Registration] ${firstName} ${lastName} (${organisation}, ${country})`);
+    const result = await sendFormSubmissionEmail({
+      formId: "FORM-LAUNCH-03",
+      formTitle: "Official Launch Registration",
+      replyTo: email,
+      confirmationSubject: "Your Trekk Mobility Official Launch place is reserved",
+      confirmationHtml,
+      fields: {
+        "First Name": firstName,
+        "Last Name": lastName,
+        "Email Address": email,
+        Organisation: organisation,
+        Country: country,
+        "Joining As": joiningAs,
+        "What They Want to Explore": interest,
+      },
+    });
 
     return NextResponse.json<ApiResponse>({
       success: true,
-      message: "Registration confirmed! You're on the list for the Trekk Mobility Launch.",
+      message:
+        "Registration confirmed! You're on the list for the Trekk Mobility Launch.",
       data: {
+        formId: "FORM-LAUNCH-03",
+        formTitle: "Official Launch Registration",
+        submissionId: result.submissionId,
         firstName,
         organisation,
         country,
@@ -67,9 +87,11 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error processing launch registration:", error);
     return NextResponse.json<ApiResponse>(
-      { success: false, message: "An error occurred while completing registration." },
+      {
+        success: false,
+        message: "An error occurred while completing registration.",
+      },
       { status: 500 }
     );
   }
 }
-

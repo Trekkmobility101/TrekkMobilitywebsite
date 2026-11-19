@@ -4,6 +4,7 @@ import {
   sanitizeField,
   buildDemoConfirmationHtml,
 } from "@src/utils/mailHelpers";
+import { sendFormSubmissionEmail } from "@src/lib/formMailer";
 import type { ApiResponse } from "@src/types/generic";
 
 export async function POST(request: Request) {
@@ -52,20 +53,39 @@ export async function POST(request: Request) {
       );
     }
 
-    // Build confirmation HTML template
     const confirmationHtml = buildDemoConfirmationHtml({
       firstName,
       company,
       vehicleType,
     });
 
-    console.log(`[Demo Request Received] ${firstName} ${lastName} (${company}) - ${email}`);
+    const result = await sendFormSubmissionEmail({
+      formId: "FORM-DEMO-01",
+      formTitle: "Platform Demo Request",
+      replyTo: email,
+      confirmationSubject: "We received your Trekk Mobility demo request",
+      confirmationHtml,
+      fields: {
+        "First Name": firstName,
+        "Last Name": lastName,
+        "Business Email": email,
+        "Phone Country": phoneCountry,
+        "Phone Number": phone,
+        "Company / Organization": company,
+        "Target Fleet Size": fleetSize,
+        "Primary Vehicle Type": vehicleType,
+        "Heard About Us": heardAbout,
+        Message: message,
+      },
+    });
 
-    // If SMTP configured in environment variables, send email; otherwise record request
     return NextResponse.json<ApiResponse>({
       success: true,
       message: "Demo request received! Our team will contact you shortly.",
       data: {
+        formId: "FORM-DEMO-01",
+        formTitle: "Platform Demo Request",
+        submissionId: result.submissionId,
         firstName,
         company,
         email,
@@ -74,9 +94,11 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error processing demo request:", error);
     return NextResponse.json<ApiResponse>(
-      { success: false, message: "An error occurred while submitting your demo request." },
+      {
+        success: false,
+        message: "An error occurred while submitting your demo request.",
+      },
       { status: 500 }
     );
   }
 }
-
