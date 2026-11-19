@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Loader2 } from "lucide-react";
 import Button from "@src/components/ui/button";
 import { Input } from "@src/components/ui/input";
 import {
@@ -285,8 +285,17 @@ export default function LaunchRegistrationForm() {
                 disabled={!agreed || loading}
                 className="w-full h-12 bg-[#12D18E] text-[#0B1220] font-bold text-base hover:bg-[#0fb87c] shadow-md gap-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Reserve my place</span>
-                <ArrowRight className="size-4" />
+                {loading ? (
+                  <>
+                    <Loader2 className="size-4 animate-spin" />
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Reserve my place</span>
+                    <ArrowRight className="size-4" />
+                  </>
+                )}
               </Button>
               <p className="text-center text-xs text-muted-foreground">
                 Free to attend. No payment details required.

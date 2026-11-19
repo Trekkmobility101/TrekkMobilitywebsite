@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Sparkles, CheckCircle2 } from "lucide-react";
+import { Mail, Sparkles, CheckCircle2, Loader2 } from "lucide-react";
 import { Input } from "@src/components/ui/input";
 import Button from "@src/components/ui/button";
 import { toast } from "sonner";
@@ -95,8 +95,17 @@ export default function Newsletter() {
               loading={loading}
               className="h-12 w-full rounded-xl bg-[#12D18E] text-[#0B1220] font-bold shadow-md hover:bg-[#0fb87c] active:scale-[0.98]"
             >
-              <Sparkles className="size-4" />
-              <span>{t("common.footer.subscribe", "Subscribe")}</span>
+              {loading ? (
+                <>
+                  <Loader2 className="size-4 animate-spin" />
+                  <span>Submitting...</span>
+                </>
+              ) : (
+                <>
+                  <Sparkles className="size-4" />
+                  <span>{t("common.footer.subscribe", "Subscribe")}</span>
+                </>
+              )}
             </Button>
             <p className="text-center text-xs text-muted-foreground">
               No spam. Unsubscribe anytime.

@@ -255,10 +255,10 @@ export default function ContactDemoForm() {
             variant="primary"
             size="md"
             rounded="xl"
-            withArrow
+            withArrow={!loading}
             className="w-full text-base font-bold shadow-md"
           >
-            {t("contact.form.submit", "Book a Platform Demo")}
+            {loading ? "Submitting..." : t("contact.form.submit", "Book a Platform Demo")}
           </CustomButton>
         </form>
       )}
