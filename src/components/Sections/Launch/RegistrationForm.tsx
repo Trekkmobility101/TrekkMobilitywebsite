@@ -5,12 +5,20 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Button from "@src/components/ui/button";
 import { Input } from "@src/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@src/components/ui/select";
 import { toast } from "sonner";
 import type { RegisterFormData } from "@src/types/forms";
 
 export default function LaunchRegistrationForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   const [formData, setFormData] = useState<RegisterFormData>({
     firstName: "",
@@ -147,18 +155,33 @@ export default function LaunchRegistrationForm() {
                 <label className="block text-xs font-semibold mb-1 text-foreground">
                   I&apos;m joining as *
                 </label>
-                <select
-                  name="joiningAs"
+                <Select
                   value={formData.joiningAs}
-                  onChange={handleChange}
-                  className="flex h-11 w-full rounded-xl border border-border bg-background px-3 py-2 text-sm text-foreground shadow-sm focus:outline-none focus:ring-2 focus:ring-[#12D18E]"
+                  onValueChange={(value) =>
+                    setFormData((prev) => ({ ...prev, joiningAs: value }))
+                  }
                 >
-                  <option value="Prospective operator / partner">Prospective operator / partner</option>
-                  <option value="Existing fleet / business">Existing fleet / business</option>
-                  <option value="Media / journalist">Media / journalist</option>
-                  <option value="Investor / ecosystem stakeholder">Investor / ecosystem stakeholder</option>
-                  <option value="Other interested attendee">Other interested attendee</option>
-                </select>
+                  <SelectTrigger className="h-11 w-full bg-background">
+                    <SelectValue placeholder="Select your role" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Prospective operator / partner">
+                      Prospective operator / partner
+                    </SelectItem>
+                    <SelectItem value="Existing fleet / business">
+                      Existing fleet / business
+                    </SelectItem>
+                    <SelectItem value="Media / journalist">
+                      Media / journalist
+                    </SelectItem>
+                    <SelectItem value="Investor / ecosystem stakeholder">
+                      Investor / ecosystem stakeholder
+                    </SelectItem>
+                    <SelectItem value="Other interested attendee">
+                      Other interested attendee
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -247,6 +270,8 @@ export default function LaunchRegistrationForm() {
                 <input
                   type="checkbox"
                   required
+                  checked={agreed}
+                  onChange={(e) => setAgreed(e.target.checked)}
                   className="mt-0.5 rounded border-border accent-[#12D18E]"
                 />
                 <span>
@@ -257,7 +282,8 @@ export default function LaunchRegistrationForm() {
               <Button
                 type="submit"
                 loading={loading}
-                className="w-full h-12 bg-[#12D18E] text-[#0B1220] font-bold text-base hover:bg-[#0fb87c] shadow-md gap-2 rounded-full"
+                disabled={!agreed || loading}
+                className="w-full h-12 bg-[#12D18E] text-[#0B1220] font-bold text-base hover:bg-[#0fb87c] shadow-md gap-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span>Reserve my place</span>
                 <ArrowRight className="size-4" />
