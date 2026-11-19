@@ -29,7 +29,7 @@ export default function EnvironmentalConservation() {
           </h2>
 
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-            We believe in giving back to the planet that sustains us. That&apos;s why we&apos;re committed to supporting environmental conservation initiatives in Nigeria and across Africa. Whether it&apos;s tree planting exercises, clearing of refuse dump sites, beach cleanups, or wildlife conservation efforts, we&apos;re actively involved in initiatives that promote biodiversity, protect natural habitats, and preserve the rich ecological heritage of the continent.
+            We believe in giving back to the planet that sustains us. That&apos;s why we&apos;re committed to supporting environmental conservation initiatives in Nigeria, across Africa, and beyond. Whether it&apos;s tree planting exercises, clearing of refuse dump sites, beach cleanups, or wildlife conservation efforts, we&apos;re actively involved in initiatives that promote biodiversity, protect natural habitats, and preserve the rich ecological heritage of the continent.
           </p>
         </motion.div>
 

@@ -32,7 +32,7 @@ export default function SustainabilityBanner() {
             </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-[#E3EDE8] sm:text-lg">
-              At Trekk, we are committed to not only revolutionizing urban mobility but also empowering businesses, campuses, and municipalities to champion environmental stewardship across Nigeria and Africa. As Africa&apos;s premier B2B micromobility technology platform, we help fleet operators cut carbon emissions, alleviate congestion, and build cleaner, greener communities.
+              At Trekk, we are committed to not only revolutionizing urban mobility but also empowering businesses, campuses, and municipalities to champion environmental stewardship across Nigeria, Africa, and beyond. As a premier B2B micromobility technology platform, we help fleet operators cut carbon emissions, alleviate congestion, and build cleaner, greener communities.
             </p>
 
             <div className="pt-2">

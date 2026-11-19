@@ -32,7 +32,7 @@ export default function EcoTransportation() {
           </h2>
 
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-            By equipping commercial operators, universities, and enterprises with electric fleet infrastructure, Trekk significantly reduces the carbon footprint associated with traditional gasoline-powered shuttles and vehicles. Our connected e-scooter and EV platform enables zero-emission transit networks that combat air pollution without compromising operational reliability.
+            By equipping commercial operators, universities, and enterprises with electric fleet infrastructure across Africa and beyond, Trekk significantly reduces the carbon footprint associated with traditional gasoline-powered shuttles and vehicles. Our connected e-scooter and EV platform enables zero-emission transit networks that combat air pollution without compromising operational reliability.
           </p>
         </motion.div>
 

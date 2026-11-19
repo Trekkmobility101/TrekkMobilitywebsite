@@ -192,7 +192,7 @@ export default function PlatformComponents() {
         <p className="text-base text-muted-foreground">
           {t(
             "services.comp.lede",
-            "A cohesive suite of hardware integrations, rider interfaces, and operator tooling engineered for urban mobility in Africa."
+            "A cohesive suite of hardware integrations, rider interfaces, and operator tooling engineered for urban mobility in Africa and beyond."
           )}
         </p>
       </div>

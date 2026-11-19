@@ -52,7 +52,7 @@ export default function HomeTrustedShowcase() {
         {/* Trusted In / Partner Badges */}
         <div className="pt-16 sm:pt-20 text-center space-y-6">
           <span className="text-xs font-bold uppercase tracking-widest text-[#5B6B72]">
-            {t("home.trustedBy", "TRUSTED BY INNOVATIVE OPERATORS & PARTNERS ACROSS AFRICA")}
+            {t("home.trustedBy", "TRUSTED BY INNOVATIVE OPERATORS & PARTNERS ACROSS AFRICA AND BEYOND")}
           </span>
 
           <BrandMarquee />

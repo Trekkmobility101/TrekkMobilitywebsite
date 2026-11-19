@@ -56,6 +56,20 @@ const BASE_PARTNERS: PartnerLogo[] = [
     containerWidthClass: "w-32 sm:w-44 md:w-52 lg:w-60",
     imageClass: "scale-[1.5] sm:scale-[1.7]",
   },
+  {
+    id: "brand-6",
+    name: "OKAI",
+    src: "/images/brand-okai.svg",
+    alt: "OKAI Global Micromobility Vehicles",
+    containerWidthClass: "w-32 sm:w-40 md:w-48 lg:w-52",
+  },
+  {
+    id: "brand-7",
+    name: "Segway-Ninebot",
+    src: "/images/brand-segway.svg",
+    alt: "Segway-Ninebot Commercial Electric Mobility",
+    containerWidthClass: "w-40 sm:w-52 md:w-60 lg:w-68",
+  },
 ];
 
 // Repeat 4 times to ensure seamless infinite looping on all screen sizes

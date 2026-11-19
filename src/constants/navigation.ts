@@ -156,7 +156,7 @@ export const NAV_LINKS: NavLinkItem[] = [
         defaultLabel: "Blog",
         descriptionKey: "common.nav.learnMega.blog.desc",
         defaultDescription:
-          "Industry playbooks, launch stories, and shared mobility insights across Africa.",
+          "Industry playbooks, launch stories, and shared mobility insights across Africa and beyond.",
         megaMenuSection: "core",
       },
       {

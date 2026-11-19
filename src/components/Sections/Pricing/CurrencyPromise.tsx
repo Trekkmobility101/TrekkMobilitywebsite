@@ -20,7 +20,7 @@ export default function CurrencyPromise() {
         <p className="text-xs text-muted-foreground leading-relaxed">
           {t(
             "pricing.currency.p1",
-            "We understand the challenges of foreign exchange volatility in Africa. You are never forced to pay software subscriptions in volatile US Dollars if your riders pay in Naira, Cedis, or CFA Francs. Trekk bills in the local currency of the market where you operate."
+            "We understand the challenges of foreign exchange volatility in Africa and beyond. You are never forced to pay software subscriptions in volatile US Dollars if your riders pay in Naira, Cedis, or CFA Francs. Trekk bills in the local currency of the market where you operate."
           )}
         </p>
       </div>

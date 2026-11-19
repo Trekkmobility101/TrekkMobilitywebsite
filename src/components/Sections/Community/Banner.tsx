@@ -32,7 +32,7 @@ export default function CommunityBanner() {
             </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-[#E3EDE8] sm:text-lg">
-              Partner with the Trekk Ecosystem: Where Fleet Operators, Universities, and Enterprises Build Sustainable Mobility. See how our B2B partners are transforming campus and urban transit across Africa.
+              Partner with the Trekk Ecosystem: Where Fleet Operators, Universities, and Enterprises Build Sustainable Mobility. See how our B2B partners are transforming campus and urban transit across Africa and beyond.
             </p>
 
             {/* Operator & Institutional Network */}

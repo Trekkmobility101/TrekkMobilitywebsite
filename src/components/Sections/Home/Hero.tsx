@@ -153,7 +153,7 @@ export default function HomeHero() {
           <div className="lg:col-span-7 space-y-6 lg:pr-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wider text-white backdrop-blur-md">
               <span className="size-2 rounded-full bg-[#12D18E] inline-block animate-pulse" />
-              <span>{t("home.eyebrow", "The Mobility Operating System Built for Africa")}</span>
+              <span>{t("home.eyebrow", "The Mobility Operating System Built for Africa and Beyond")}</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">

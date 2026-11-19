@@ -51,7 +51,7 @@ export default function SustainabilityJoinUs() {
           </h2>
 
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-            We&apos;re more than software — we&apos;re the B2B technology backbone for a greener, more sustainable Africa. Partner with Trekk to launch zero-emission fleets for your city, university campus, residential estate, or commercial enterprise. Together, we can build cleaner, smarter transit infrastructure for generations to come.
+            We&apos;re more than software — we&apos;re the B2B technology backbone for a greener, more sustainable Africa and beyond. Partner with Trekk to launch zero-emission fleets for your city, university campus, residential estate, or commercial enterprise. Together, we can build cleaner, smarter transit infrastructure for generations to come.
           </p>
 
           <div className="pt-2">

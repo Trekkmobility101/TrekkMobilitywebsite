@@ -86,7 +86,7 @@ export default function Footer() {
           <p className="text-xs text-[#8A98A0] text-center sm:text-left">
             {t(
               "common.footer.legal",
-              "© 2026 Trekk Mobility. All rights reserved. — Mobility technology built for Africa."
+              "© 2026 Trekk Mobility. All rights reserved. — Mobility technology built for Africa and beyond."
             )}
           </p>
           <div className="flex items-center gap-4">

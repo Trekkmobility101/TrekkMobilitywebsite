@@ -10,6 +10,20 @@ const config = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/launch.html",
+        destination: "/launch",
+        permanent: true,
+      },
+      {
+        source: "/launch/html",
+        destination: "/launch",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default config;

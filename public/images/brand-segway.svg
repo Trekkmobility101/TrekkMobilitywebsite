@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 60" fill="none">
+  <circle cx="24" cy="30" r="16" stroke="#0B1220" stroke-width="3.5" />
+  <path d="M16 30H32M24 22L32 30L24 38" stroke="#12D18E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="50" y="34" fill="#0B1220" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="1.5">SEGWAY-NINEBOT</text>
+  <text x="51" y="48" fill="#5B6B72" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="3">ELECTRIC MOBILITY</text>
+</svg>
+

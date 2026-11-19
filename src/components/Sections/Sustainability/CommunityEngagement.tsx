@@ -52,7 +52,7 @@ export default function CommunityEngagement() {
           </h2>
 
           <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-            Trekk isn&apos;t just a transportation service; it&apos;s a catalyst for community engagement and empowerment. By partnering with universities, residential estates, and industrial hubs across Africa, we&apos;re providing accessible and sustainable transportation solutions tailored to the unique needs of each community. Through initiatives such as campus outreach programs, educational workshops, and community events, we&apos;re fostering a culture of environmental awareness and sustainability among our users.
+            Trekk isn&apos;t just a transportation service; it&apos;s a catalyst for community engagement and empowerment. By partnering with universities, residential estates, and industrial hubs across Africa and beyond, we&apos;re providing accessible and sustainable transportation solutions tailored to the unique needs of each community. Through initiatives such as campus outreach programs, educational workshops, and community events, we&apos;re fostering a culture of environmental awareness and sustainability among our users.
           </p>
         </motion.div>
 
