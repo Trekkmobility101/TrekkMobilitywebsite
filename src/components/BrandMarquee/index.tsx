@@ -59,14 +59,14 @@ const BASE_PARTNERS: PartnerLogo[] = [
   {
     id: "brand-6",
     name: "OKAI",
-    src: "/images/brand-okai.svg",
+    src: "/images/brand-OKAI.png",
     alt: "OKAI Global Micromobility Vehicles",
     containerWidthClass: "w-32 sm:w-40 md:w-48 lg:w-52",
   },
   {
     id: "brand-7",
     name: "Segway-Ninebot",
-    src: "/images/brand-segway.svg",
+    src: "/images/brand-segway.png",
     alt: "Segway-Ninebot Commercial Electric Mobility",
     containerWidthClass: "w-40 sm:w-52 md:w-60 lg:w-68",
   },
