@@ -8,9 +8,9 @@ import DefaultLayout from "@src/layouts/DefaultLayout";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trekkmobility.com"),
-  title: "Trekk Mobility — The Mobility Operating System Built for Africa",
+  title: "Trekk Mobility — The Mobility Operating System Built for Africa and Beyond",
   description:
-    "Trekk Mobility powers the next generation of shared and rental mobility in Africa with rider apps, operator dashboards, IoT integration, and automated payments.",
+    "Trekk Mobility powers the next generation of shared and rental mobility in Africa and beyond with rider apps, operator dashboards, IoT integration, and automated payments.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     "EV Fleet Management",
     "IoT Telematics",
     "Fleet Economics",
-    "Smart Cities Africa",
+    "Smart Cities Africa and Beyond",
   ],
   authors: [{ name: "Trekk Mobility Team", url: "https://trekkmobility.com" }],
   openGraph: {
-    title: "Trekk Mobility — Mobility Operating System Built for Africa",
+    title: "Trekk Mobility — Mobility Operating System Built for Africa and Beyond",
     description:
       "Powering vehicle sharing, digital rentals, fleet management, ride-hailing, IoT, and analytics across African cities.",
     url: "https://trekkmobility.com",
