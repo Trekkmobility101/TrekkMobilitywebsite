@@ -3,22 +3,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const IMPACT_METRICS = [
-  {
-    value: "1,200+",
-    label: "Vehicles Onboarded",
-  },
-  {
-    value: "25,000+",
-    label: "Trips Completed",
-  },
-  {
-    value: "8+",
-    label: "Countries of Operation",
-  },
+const IMPACT_METRICS: {
+  value: string;
+  label: string;
+  sublabel?: string;
+}[] = [
   {
     value: "500+",
-    label: "Fleet & Partner Hubs",
+    label: "Vehicles Supported",
+  },
+  {
+    value: "10",
+    label: "Countries",
+    sublabel: "Across 4 continents",
+  },
+  {
+    value: "17/day",
+    label: "Average Trips per Vehicle",
+  },
+  {
+    value: "8,500/day",
+    label: "Fleet Trip Capacity",
   },
 ];
 
@@ -41,7 +46,7 @@ export default function ImpactStats() {
             Our Impact in Numbers
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Driving operational efficiency and connecting businesses across borders.
+            Powering smarter fleet operations and mobility businesses across borders.
           </p>
         </motion.div>
 
@@ -58,9 +63,16 @@ export default function ImpactStats() {
               <p className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
                 {metric.value}
               </p>
-              <p className="text-xs sm:text-sm font-medium text-muted-foreground">
-                {metric.label}
-              </p>
+              <div className="space-y-0.5">
+                <p className="text-xs sm:text-sm font-medium text-muted-foreground">
+                  {metric.label}
+                </p>
+                {metric.sublabel ? (
+                  <p className="text-xs text-muted-foreground/80">
+                    {metric.sublabel}
+                  </p>
+                ) : null}
+              </div>
             </motion.div>
           ))}
         </div>
