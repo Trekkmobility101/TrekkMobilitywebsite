@@ -6,24 +6,27 @@ import { motion } from "framer-motion";
 const IMPACT_METRICS: {
   value: string;
   label: string;
-  sublabel?: string;
+  sublabel: string;
 }[] = [
   {
-    value: "500+",
-    label: "Vehicles Supported",
+    value: "70,000+",
+    label: "Rides Delivered",
+    sublabel: "Through Trekk Scooters",
   },
   {
-    value: "10",
-    label: "Countries",
+    value: "6 Countries",
+    label: "Founder Presence",
     sublabel: "Across 4 continents",
   },
   {
     value: "17/day",
     label: "Average Trips per Vehicle",
+    sublabel: "Based on operating experience",
   },
   {
-    value: "8,500/day",
-    label: "Fleet Trip Capacity",
+    value: "500,000+",
+    label: "Community Population",
+    sublabel: "Across communities under signed agreements",
   },
 ];
 
@@ -46,11 +49,11 @@ export default function ImpactStats() {
             Our Impact in Numbers
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Powering smarter fleet operations and mobility businesses across borders.
+            Built on real operating experience, community partnerships, and global expertise.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6">
           {IMPACT_METRICS.map((metric, idx) => (
             <motion.div
               key={metric.label}
@@ -58,20 +61,21 @@ export default function ImpactStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.45, ease: "easeOut", delay: idx * 0.08 }}
-              className="border-l-2 border-[#12D18E]/40 pl-5 space-y-1.5"
+              className="group relative rounded-xl border border-border/60 bg-card/60 p-6 flex flex-col justify-between gap-4 transition-colors duration-200 hover:border-[#12D18E]/40"
             >
-              <p className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
-                {metric.value}
-              </p>
-              <div className="space-y-0.5">
-                <p className="text-xs sm:text-sm font-medium text-muted-foreground">
+              <div className="space-y-3">
+                <div className="h-0.5 w-8 rounded-full bg-[#12D18E]/70 transition-all duration-300 group-hover:w-12 group-hover:bg-[#12D18E]" />
+                <p className="font-display text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight tabular-nums">
+                  {metric.value}
+                </p>
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-foreground">
                   {metric.label}
                 </p>
-                {metric.sublabel ? (
-                  <p className="text-xs text-muted-foreground/80">
-                    {metric.sublabel}
-                  </p>
-                ) : null}
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  {metric.sublabel}
+                </p>
               </div>
             </motion.div>
           ))}
