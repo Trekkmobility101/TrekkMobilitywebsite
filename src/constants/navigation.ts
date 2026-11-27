@@ -151,7 +151,7 @@ export const NAV_LINKS: NavLinkItem[] = [
     defaultMegaTitle: "Learn & Tools",
     subItems: [
       {
-        href: "/academy#blog",
+        href: "/blog",
         labelKey: "common.nav.learnSub.blog",
         defaultLabel: "Blog",
         descriptionKey: "common.nav.learnMega.blog.desc",
@@ -351,7 +351,7 @@ export const FOOTER_SECTIONS: FooterSection[] = [
     defaultTitle: "Learn",
     links: [
       {
-        href: "/academy#blog",
+        href: "/blog",
         labelKey: "common.nav.learnSub.blog",
         defaultLabel: "Blog",
       },
