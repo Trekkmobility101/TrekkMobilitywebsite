@@ -12,9 +12,7 @@ import {
   CheckCircle2,
   Clock,
   Link2,
-  Mail,
   MapPin,
-  Phone,
   Printer,
   Quote,
 } from "lucide-react";
@@ -82,7 +80,7 @@ export default function BlogPostView({
                 ) : (
                   <>
                     <Link2 className="size-3.5" />
-                    <span>Share Release</span>
+                    <span>Share Article</span>
                   </>
                 )}
               </button>
@@ -105,9 +103,6 @@ export default function BlogPostView({
           >
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center rounded-full bg-[#12D18E] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#0B1220]">
-                {post.category}
-              </span>
-              <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#E3EDE8]">
                 {post.topic}
               </span>
             </div>
@@ -216,19 +211,9 @@ export default function BlogPostView({
                 </React.Fragment>
               );
             })}
-
-            {/* About Trekk Mobility Boilerplate */}
-            <div className="mt-12 rounded-2xl border border-[#12D18E]/25 bg-[#F4FBF7] p-6 sm:p-8 space-y-3">
-              <p className="text-xs font-extrabold uppercase tracking-widest text-[#0B875B]">
-                About Trekk Mobility
-              </p>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                {post.aboutBoilerplate}
-              </p>
-            </div>
           </div>
 
-          {/* Sticky Press Sidebar */}
+          {/* Sticky Sidebar */}
           <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
             {/* Key Highlights */}
             <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-4">
@@ -246,44 +231,6 @@ export default function BlogPostView({
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Media Contact */}
-            <div className="rounded-2xl border border-border bg-white p-6 shadow-sm space-y-4">
-              <p className="text-xs font-extrabold uppercase tracking-widest text-[#0B875B]">
-                Media Contact
-              </p>
-              <div className="space-y-1">
-                <p className="font-display text-base font-bold text-foreground">
-                  {post.mediaContact.name}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {post.mediaContact.role}
-                </p>
-              </div>
-              <div className="space-y-2.5 pt-1 text-sm">
-                <a
-                  href={`tel:${post.mediaContact.telephone}`}
-                  className="flex items-center gap-2 text-slate-700 hover:text-[#0B875B] transition-colors"
-                >
-                  <Phone className="size-4 text-[#12D18E] shrink-0" />
-                  <span>{post.mediaContact.telephone}</span>
-                </a>
-                <a
-                  href={`mailto:${post.mediaContact.email}`}
-                  className="flex items-center gap-2 text-slate-700 hover:text-[#0B875B] transition-colors break-all"
-                >
-                  <Mail className="size-4 text-[#12D18E] shrink-0" />
-                  <span>{post.mediaContact.email}</span>
-                </a>
-                <a
-                  href={`mailto:${post.mediaContact.generalEmail}`}
-                  className="flex items-center gap-2 text-slate-700 hover:text-[#0B875B] transition-colors"
-                >
-                  <Mail className="size-4 text-[#12D18E] shrink-0" />
-                  <span>General: {post.mediaContact.generalEmail}</span>
-                </a>
-              </div>
             </div>
 
             {/* Founding Partner CTA */}
@@ -322,7 +269,7 @@ export default function BlogPostView({
                   More From Newsroom
                 </p>
                 <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                  Related Press Releases
+                  Related Articles
                 </h2>
               </div>
               <Link
@@ -349,9 +296,6 @@ export default function BlogPostView({
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <span className="absolute top-4 left-4 inline-flex items-center rounded-full bg-[#12D18E] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#0B1220]">
-                      {related.category}
-                    </span>
                   </div>
                   <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
                     <div className="space-y-2">
@@ -363,7 +307,7 @@ export default function BlogPostView({
                       </h3>
                     </div>
                     <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#0B1813] group-hover:text-[#0B875B] pt-2">
-                      <span>Read Release</span>
+                      <span>Read Article</span>
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>

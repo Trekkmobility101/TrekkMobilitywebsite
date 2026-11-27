@@ -8,12 +8,9 @@ import {
   ArrowRight,
   Calendar,
   Clock,
-  Mail,
   MapPin,
-  Phone,
 } from "lucide-react";
 import { BLOG_POSTS } from "@src/constants/blog";
-import Button from "@src/components/ui/button";
 
 export default function BlogGrid() {
   const [selectedTopic, setSelectedTopic] = useState<string>("All");
@@ -48,14 +45,14 @@ export default function BlogGrid() {
                     : "border border-border bg-white text-muted-foreground hover:border-[#12D18E] hover:text-foreground"
                 }`}
               >
-                {topic === "All" ? "All Releases" : topic}
+                {topic === "All" ? "All Articles" : topic}
               </button>
             );
           })}
         </div>
         <p className="text-xs sm:text-sm text-muted-foreground">
           Showing {filteredPosts.length}{" "}
-          {filteredPosts.length === 1 ? "release" : "releases"}
+          {filteredPosts.length === 1 ? "article" : "articles"}
         </p>
       </div>
 
@@ -82,9 +79,6 @@ export default function BlogGrid() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <span className="absolute top-5 left-5 inline-flex items-center rounded-full bg-[#12D18E] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0B1220] shadow-md">
-                {featuredPost.category}
-              </span>
             </div>
 
             <div className="lg:col-span-6 p-7 sm:p-10 flex flex-col justify-between space-y-6">
@@ -118,11 +112,11 @@ export default function BlogGrid() {
 
               <div className="pt-2 flex items-center justify-between border-t border-border/60">
                 <span className="inline-flex items-center gap-2 text-sm font-bold text-[#0B1813] group-hover:text-[#0B875B] transition-colors">
-                  <span>Read Press Release</span>
+                  <span>Read Article</span>
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </span>
                 <span className="text-xs text-muted-foreground">
-                  Featured Release
+                  Featured Story
                 </span>
               </div>
             </div>
@@ -152,9 +146,6 @@ export default function BlogGrid() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-                  <span className="absolute top-4 left-4 inline-flex items-center rounded-full bg-[#12D18E] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#0B1220] shadow">
-                    {post.category}
-                  </span>
                 </div>
 
                 <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-5">
@@ -180,7 +171,7 @@ export default function BlogGrid() {
 
                   <div className="pt-4 border-t border-border/60 flex items-center justify-between">
                     <span className="inline-flex items-center gap-2 text-sm font-bold text-[#0B1813] group-hover:text-[#0B875B] transition-colors">
-                      <span>Read Press Release</span>
+                      <span>Read Article</span>
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </span>
                     <span className="text-xs font-medium text-muted-foreground">
@@ -193,52 +184,6 @@ export default function BlogGrid() {
           ))}
         </div>
       )}
-
-      {/* Press & Media Contact Strip */}
-      <div className="relative overflow-hidden rounded-3xl bg-[#0B1813] text-white p-8 sm:p-10 border border-white/10 shadow-xl">
-        <div className="pointer-events-none absolute -top-24 -right-24 size-[320px] rounded-full bg-[#12D18E]/15 blur-[100px]" />
-        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          <div className="space-y-3 max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#12D18E]">
-              Media &amp; Press Enquiries
-            </p>
-            <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Need interviews, high-res assets, or press briefing details?
-            </h3>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#C8DBD2] pt-1">
-              <span className="font-semibold text-white">
-                Oludolapo Agbejobi — Communications Manager
-              </span>
-              <a
-                href="tel:+2348143914910"
-                className="inline-flex items-center gap-1.5 hover:text-[#12D18E] transition-colors"
-              >
-                <Phone className="size-3.5 text-[#12D18E]" />
-                +234 814 391 4910
-              </a>
-              <a
-                href="mailto:communications.trekk@gmail.com"
-                className="inline-flex items-center gap-1.5 hover:text-[#12D18E] transition-colors"
-              >
-                <Mail className="size-3.5 text-[#12D18E]" />
-                communications.trekk@gmail.com
-              </a>
-            </div>
-          </div>
-
-          <div className="shrink-0">
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-[#12D18E] text-[#0B1220] hover:bg-[#0fb87c] font-bold gap-2 rounded-full px-7 shadow-lg shadow-[#12D18E]/20"
-              >
-                <span>Request a Discovery Call</span>
-                <ArrowRight className="size-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

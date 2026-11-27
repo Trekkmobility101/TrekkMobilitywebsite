@@ -13,7 +13,6 @@ export type BlogContentBlock =
 
 export type BlogPost = {
   slug: string;
-  category: string;
   topic: string;
   title: string;
   excerpt: string;
@@ -27,31 +26,11 @@ export type BlogPost = {
   bodyImageCaption: string;
   keyHighlights: string[];
   blocks: BlogContentBlock[];
-  aboutBoilerplate: string;
-  mediaContact: {
-    name: string;
-    role: string;
-    telephone: string;
-    email: string;
-    generalEmail: string;
-  };
-};
-
-const SHARED_ABOUT_BOILERPLATE =
-  "Trekk Mobility is the mobility operating system built for global markets. Starting in Africa, it helps entrepreneurs and organisations launch, manage and scale shared mobility fleets across many vehicle types, combining vehicle strategy, procurement, technology, billing, onboarding, payments and maintenance support. With a focus on affordability and local-currency payments, Trekk makes shared mobility more accessible in emerging markets. The company is headquartered in Lagos, Nigeria, and was founded by four co-founders based across four countries. Learn more at www.trekkmobility.com";
-
-const SHARED_MEDIA_CONTACT = {
-  name: "Oludolapo Agbejobi",
-  role: "Communications Manager, Trekk Mobility",
-  telephone: "+2348143914910",
-  email: "communications.trekk@gmail.com",
-  generalEmail: "hello@trekkmobility.com",
 };
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "trekk-mobility-explores-mobility-data-transportation-policy-infrastructure-africa",
-    category: "FOR IMMEDIATE RELEASE",
     topic: "Policy & Infrastructure",
     title:
       "Trekk Mobility Explores How Mobility Data Could Inform Transportation Policy and Infrastructure Planning in Africa",
@@ -155,12 +134,9 @@ export const BLOG_POSTS: BlogPost[] = [
         text: "The company’s product showcase brought together its co-founders, partners, journalists, media professionals and other stakeholders to examine the technology, operational considerations and opportunities shaping the shared mobility industry.",
       },
     ],
-    aboutBoilerplate: SHARED_ABOUT_BOILERPLATE,
-    mediaContact: SHARED_MEDIA_CONTACT,
   },
   {
     slug: "trekk-mobility-opens-founding-partner-programme",
-    category: "FOR IMMEDIATE RELEASE",
     topic: "Founding Partner Programme",
     title:
       "Trekk Mobility Opens Founding Partner Programme to Help Businesses Launch Shared Mobility Services",
@@ -264,12 +240,9 @@ export const BLOG_POSTS: BlogPost[] = [
         text: "The company’s product showcase brought together its co-founders, partners, journalists, media professionals and other stakeholders to examine the technology, operational considerations and opportunities shaping the shared mobility industry.",
       },
     ],
-    aboutBoilerplate: SHARED_ABOUT_BOILERPLATE,
-    mediaContact: SHARED_MEDIA_CONTACT,
   },
   {
     slug: "trekk-mobility-turns-shared-scooter-experience-into-infrastructure-africa",
-    category: "FOR IMMEDIATE RELEASE",
     topic: "Company Evolution & Platform",
     title:
       "Trekk Mobility Turns Shared Scooter Experience into Infrastructure for Businesses Across Africa and beyond",
@@ -411,8 +384,6 @@ export const BLOG_POSTS: BlogPost[] = [
         text: "Businesses and prospective partners interested in exploring the Founding Partner Programme can visit www.trekkmobility.com or contact hello@trekkmobility.com to request a discovery call or product demonstration.",
       },
     ],
-    aboutBoilerplate: SHARED_ABOUT_BOILERPLATE,
-    mediaContact: SHARED_MEDIA_CONTACT,
   },
 ];
 
